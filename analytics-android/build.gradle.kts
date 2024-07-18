@@ -47,6 +47,17 @@ dependencies {
 }
 
 publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.reelevant.analytics"
+            artifactId = "analytics-android"
+            version = "0.0.1-SNAPSHOT"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
     repositories {
         maven {
             name = "ReelevantAndroidAnalytics"
