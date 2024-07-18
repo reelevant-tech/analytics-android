@@ -53,7 +53,7 @@ publishing {
                 groupId = "com.reelevant.analytics"
                 artifactId = "analytics-android-release"
                 version = "0.0.1-SNAPSHOT"
-                artifact("$buildDir/outputs/aar/analytics-android-release.aar")
+                artifact(layout.buildDirectory.file("outputs/aar/analytics-android-release.aar")).toString()
             }
         }
     }
