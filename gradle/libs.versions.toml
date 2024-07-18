@@ -1,0 +1,58 @@
+[versions]
+agp = "8.5.0"
+gson = "2.10.1"
+json = "20180813"
+kotlin = "1.9.0"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+constraintlayout = "2.1.4"
+mockitoAndroid = "2.12.0"
+mockitoCore = "2.13.3"
+mockk = "1.13.5"
+mockkAndroid = "1.13.5"
+navigationFragmentKtx = "2.6.0"
+navigationUiKtx = "2.6.0"
+playServicesAds = "23.2.0"
+playServicesLocation = "21.3.0"
+robolectric = "4.7.3"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+gms-play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+io-mockk-mockk = { module = "io.mockk:mockk" }
+io-mockk-mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkAndroid" }
+io-mockk-mockk2 = { module = "io.mockk:mockk", version.ref = "mockk" }
+json = { module = "org.json:json", version.ref = "json" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+mockito-android = { module = "org.mockito:mockito-android", version.ref = "mockitoAndroid" }
+mockito-core = { module = "org.mockito:mockito-core" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin" }
+mockito-mockito-android = { module = "org.mockito:mockito-android" }
+mockito-mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+mockk = { module = "io.mockk:mockk" }
+mockk-agent = { module = "io.mockk:mockk-agent" }
+mockk-android = { module = "io.mockk:mockk-android" }
+mockk-mockk = { module = "io.mockk:mockk" }
+mockk-mockk-agent = { module = "io.mockk:mockk-agent" }
+mockk-mockk-android = { module = "io.mockk:mockk-android" }
+play-services-ads = { module = "com.google.android.gms:play-services-ads" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+

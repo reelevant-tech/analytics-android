@@ -1,15 +1,5 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-  id("org.jetbrains.dokka")
-  id("com.vanniktech.maven.publish")
-}
-
-allprojects {
-  repositories {
-    google()
-    mavenCentral()
-  }
-}
-
-tasks.dokkaHtmlMultiModule.configure {
-  outputDirectory.set(rootDir.resolve("docs/api"))
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.jetbrains.kotlin.android) apply false
 }

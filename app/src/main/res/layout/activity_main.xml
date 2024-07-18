@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:id="@+id/button_page_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickPageViewButton"
+                android:text="@string/button_page_view" />
+
+            <Button
+                android:id="@+id/button_add_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickAddCartButton"
+                android:text="@string/button_add_cart" />
+
+            <Button
+                android:id="@+id/button_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickPurchaseButton"
+                android:text="@string/button_purchase" />
+
+            <Button
+                android:id="@+id/button_product_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickProductPageButton"
+                android:text="@string/button_product_page" />
+
+            <Button
+                android:id="@+id/button_category_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickCategoryViewButton"
+                android:text="@string/button_category_view" />
+
+            <Button
+                android:id="@+id/button_brand_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickBrandViewButton"
+                android:text="@string/button_brand_view" />
+
+            <Button
+                android:id="@+id/button_product_hover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickProductHoverButton"
+                android:text="@string/button_product_hover" />
+
+            <Button
+                android:id="@+id/button_custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickCustomButton"
+                android:text="@string/button_custom" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_client_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="@string/client_id"
+                    tools:ignore="LabelFor" />
+
+                <Button
+                    android:id="@+id/button_client_id_set"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_set" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent">
+
+                <EditText
+                    android:id="@+id/edit_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:inputType="textUri"
+                    android:text="@string/url"
+                    tools:ignore="LabelFor" />
+
+                <Button
+                    android:id="@+id/button_url_set"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_set" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
