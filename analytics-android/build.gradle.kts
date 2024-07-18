@@ -47,16 +47,6 @@ dependencies {
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("gpr") {
-            run {
-                groupId = "com.reelevant.analytics"
-                artifactId = "analytics-android-release"
-                version = "0.0.1-SNAPSHOT"
-                artifact(layout.buildDirectory.file("outputs/aar/analytics-android-release.aar")).toString()
-            }
-        }
-    }
     repositories {
         maven {
             name = "ReelevantAndroidAnalytics"
