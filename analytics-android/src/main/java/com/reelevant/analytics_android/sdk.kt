@@ -330,7 +330,7 @@ class ReelevantSDK(private var context: Context, companyId: String, datasourceId
             ReelevantLogger.debug("Unable to collect advertising ID from Amazon Fire OS.")
         }
         ReelevantLogger.debug("Unable to collect advertising ID from Amazon Fire OS and Google Play Services.")
-        return Secure.ANDROID_ID
+        return this.randomIdentifier()
     }
 
     private suspend fun getTemporaryUserId(): String {
