@@ -108,8 +108,8 @@ class SendUnitTest {
 
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
-    fun shouldSendEventWithAndroidIdWhenNoSharedPreferences () = runTest {
-        val expected = "{\"eventId\":\"1234567890123456789012345\",\"clientId\":\"UserId\",\"data\":{},\"v\":1,\"tmpId\":\"android_id\",\"name\":\"page_view\",\"key\":\"dummy-company-id\",\"url\":\"unknown\",\"timestamp\":123456789876543}"
+    fun shouldSendEventWithRandomIdWhenNoSharedPreferences () = runTest {
+        val expected = "{\"eventId\":\"1234567890123456789012345\",\"clientId\":\"UserId\",\"data\":{},\"v\":1,\"tmpId\":\"1234567890123456789012345\",\"name\":\"page_view\",\"key\":\"dummy-company-id\",\"url\":\"unknown\",\"timestamp\":123456789876543}"
         val event = sdk.pageView(emptyMap())
 
         every { sharedPreferences.getString(ReelevantAnalytics.TEMPORARY_USER_ID, null) } returns null

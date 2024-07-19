@@ -53,6 +53,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.reelevant.analytics:analytics-android:0.0.2-SNAPSHOT")
+    implementation(project(":analytics-android"))
     implementation(libs.gms.play.services.ads)
 }
