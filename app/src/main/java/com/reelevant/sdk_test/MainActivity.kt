@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         val context = this
         this.sdk = ReelevantSDK(
             context,
-            "60d2dcae87a5ca0006335a82",
-            "6298afcc7527000300387fdf"
+            "<companyId>",
+            "<datasourceId"
         )
 
         super.onCreate(savedInstanceState)

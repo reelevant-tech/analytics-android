@@ -30,7 +30,6 @@ android {
     }
 }
 
-
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -49,9 +48,9 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.reelevant.analytics"
-            artifactId = "analytics-android"
-            version = "0.0.1-SNAPSHOT"
+            groupId = project.extra["GROUP"].toString()
+            artifactId = project.extra["ARTIFACT"].toString()
+            version = project.extra["VERSION_NAME"].toString()
 
             afterEvaluate {
                 from(components["release"])
@@ -60,7 +59,6 @@ publishing {
     }
     repositories {
         maven {
-            name = "ReelevantAndroidAnalytics"
             url = uri("https://maven.pkg.github.com/reelevant-tech/analytics-android")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
